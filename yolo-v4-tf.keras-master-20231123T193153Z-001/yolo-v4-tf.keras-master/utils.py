@@ -187,7 +187,7 @@ class DataGenerator(Sequence):
     def get_data(self, annotation_line):
         line = annotation_line.split()
         img_path = line[0]
-        print(img_path + " " + self.folder_path)
+        print( self.folder_path + " " +img_path)
         
         img = cv2.imread(os.path.join(self.folder_path, img_path))[:, :, ::-1]
         ih, iw = img.shape[:2]
